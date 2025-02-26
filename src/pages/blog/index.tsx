@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useRef } from "react";
 import { NavLink, Outlet } from "react-router-dom";
+import { MdKeyboardArrowRight } from "react-icons/md";
 import blog1 from "../../assets/images/blog1.png";
 import blog2 from "../../assets/images/blog2.png";
-import CurvedLine from "../../components/ui/CurvedLine";
-import { MdKeyboardArrowRight } from "react-icons/md";
 import unn from "../../assets/images/unn.png";
+import CurvedLine from "../../components/ui/CurvedLine";
 
 const Blog: React.FC = () => {
+  const scrollRef = useRef<HTMLUListElement>(null);
+
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 150, behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="w-full">
       <div className="bg-[#FFF8FA] relative py-5 overflow-hidden">
@@ -20,12 +28,12 @@ const Blog: React.FC = () => {
           <img
             src={blog1}
             alt="Blog 1"
-            className="absolute -left-20 top-0 h-[300px] w-[400px] z-30 object-cover m-0 p-0"
+            className="absolute -left-20 top-0 h-[300px] w-[400px] z-30 object-cover"
           />
           <img
             src={blog2}
             alt="Blog 2"
-            className="absolute -right-20 top-0 h-[380px] z-30 object-cover m-0 p-0 -rotate-16"
+            className="absolute -right-20 top-0 h-[380px] z-30 object-cover -rotate-16"
           />
         </div>
 
@@ -37,11 +45,15 @@ const Blog: React.FC = () => {
         </div>
       </div>
 
-      <div>
-        <div className="flex justify-between px-18 items-center mt-13">
-          <p className="text-gray-500">Explore specific categories</p>
-          <div className="flex gap-8 items-center">
-            <ul className="flex gap-7 items-center text-[#8E1C38]">
+      <div className="lg:flex justify-between px-6 lg:px-18 mt-10">
+        <p className="text-gray-500">Explore specific categories</p>
+
+        <div className="flex items-center gap-4">
+          <div className="relative w-full overflow-hidden">
+            <ul
+              ref={scrollRef}
+              className="flex gap-6 items-center text-[#8E1C38] overflow-x-auto whitespace-nowrap scrollbar-hide"
+            >
               {[
                 { name: "African News", path: "/blog/african-news" },
                 { name: "Employment", path: "/blog/employment" },
@@ -50,7 +62,7 @@ const Blog: React.FC = () => {
                 { name: "Talent", path: "/blog/talent" },
                 { name: "Opportunities", path: "/blog/opportunities" },
               ].map((link) => (
-                <li key={link.name}>
+                <li key={link.name} className="shrink-0">
                   <NavLink
                     to={link.path}
                     className={({ isActive }) =>
@@ -66,17 +78,20 @@ const Blog: React.FC = () => {
                 </li>
               ))}
             </ul>
-
-            <div className="bg-[#eadade] rounded-full h-4 w-4 flex items-center justify-center">
-              <MdKeyboardArrowRight className="text-[#8E1C38]" />
-            </div>
           </div>
-        </div>
 
-        <main className="my-12 px-5">
-          <Outlet />
-        </main>
+          <button
+            className="bg-[#eadade] rounded-full h-7 w-7 flex items-center justify-center"
+            onClick={scrollRight}
+          >
+            <MdKeyboardArrowRight className="text-[#8E1C38] text-lg" />
+          </button>
+        </div>
       </div>
+
+      <main className="my-12">
+        <Outlet />
+      </main>
     </div>
   );
 };

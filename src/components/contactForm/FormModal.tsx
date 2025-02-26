@@ -1,6 +1,6 @@
 const FormModal = () => {
   return (
-    <form className="w-[30rem] bg-white p-10 space-y-5 rounded-[5px] shadow-md">
+    <form className="w-[27rem] lg:w-[30rem] bg-white p-10 space-y-5 rounded-[5px] shadow-md">
       <div className="relative">
         <label className="text-left text-[10px] text-gray-400 px-1 -top-2 left-3 bg-white absolute">
           First Name

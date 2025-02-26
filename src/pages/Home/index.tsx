@@ -37,8 +37,8 @@ const Home: React.FC = () => {
   return (
     <div className="overflow-x-hidden">
        <div className="relative">
-      <div className="flex bg-[#FFF8FA] px-14 py-14">
-        <div className="w-1/2 pr-10 pl-3 flex flex-col justify-center">
+      <div className="flex flex-col gap-5 lg:gap-0 lg:flex-row bg-[#FFF8FA] px-8 lg:px-14 py-14">
+        <div className="w-full lg:w-1/2 pr-10 pl-3 flex flex-col justify-center">
           <p className="font-bold text-[20px] text-[#8E1C38]">
             Are you a visionary startup ready to revolutionize Africa through
             innovative technology solutions?
@@ -52,7 +52,7 @@ const Home: React.FC = () => {
             className="mt-5 w-26"
           />
         </div>
-        <div className="w-1/2 relative">
+        <div className=" w-full lg:w-1/2 relative">
   <img
     src={image1}
     className="w-[320px] h-[300px] object-cover rounded-md mx-auto"
@@ -60,7 +60,7 @@ const Home: React.FC = () => {
   />
   
  
-  <div className="absolute z-50 top-7 left-24 lg:top-7 lg:left-8 xl:top-7 xl:left-24">
+  <div className="absolute z-10 top-7 -left-8 lg:top-7 lg:left-8 xl:top-7 xl:left-24">
     <Float
       name="Network"
       icon={<img src={network} alt="network" className="w-4 h-4" />}
@@ -69,7 +69,7 @@ const Home: React.FC = () => {
   </div>
 
   
-  <div className="absolute z-50 bottom-14 right-16 lg:bottom-14 lg:right-5 xl:bottom-14 xl:right-16">
+  <div className="absolute z-10 bottom-14 -right-8 lg:bottom-14 lg:right-5 xl:bottom-14 xl:right-16">
     <Float
       name="Sport Talents"
       icon={<img src={sport} alt="sport" className="w-4 h-4" />}
@@ -91,11 +91,11 @@ const Home: React.FC = () => {
       
 
 
-      <div className="text-center px-20 mt-10 py-8 w-full">
+      <div className="text-center px-10 lg:px-20 mt-10 py-8 w-full">
         <p className="text-[20px] font-semibold mb-14 ">
           Companies we've worked with
         </p>
-        <div className="flex justify-between items-center ">
+        <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center ">
           {companies.map((company, index) => (
             <img
               key={index}
@@ -109,7 +109,7 @@ const Home: React.FC = () => {
       <h3 className="text-center mb-10 text-[#8E1C38] text-[20px] font-semibold mt-8">
         What you stand to gain
       </h3>
-      <div className="overflow-x-auto py-5 pl-14  scrollbar-hide">
+      <div className="overflow-x-auto py-5 pl-14 scrollbar-hide">
         <div className="flex gap-7 w-max">
           <CardOne title="End-to-End Solution" image={card1} />
           <CardOne title="Network Collaboration" image={card2} />
@@ -121,8 +121,8 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-[90%] flex gap-6 px-14 mt-14">
-        <div className="flex gap-5">
+      <div className="lg:max-w-[90%] flex flex-col lg:flex-row gap-6 px-9 lg:px-14 mt-14 mb-14">
+        <div className="flex flex-col lg:flex-row lg:gap-5">
           <CardTwo image={img1} />
           <CardTwo image={img2} />
         </div>
@@ -151,11 +151,11 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="px-14 bg-[#FFF8FA] py-10">
+      <div className="px-10 lg:px-14 bg-[#FFF8FA] py-10">
         <h3 className="text-center text-[#8E1C38] mb-10 font-semibold">
           Read Our Article
         </h3>
-        <div className="grid grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
           <CardOne
             title="Examine labour market trends in Northen and Sub-Saharan Africa"
             image={card21}

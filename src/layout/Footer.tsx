@@ -16,19 +16,19 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <div className="pt-24 pb-36 px-14 flex justify-between w-full">
+    <div className="pt-24 pb-36 px-10 lg:px-14 flex flex-col lg:flex-row justify-between w-full">
     
-      <div className="space-y-5">
+      <div className="flex lg:block justify-between items-center space-y-5">
         <Logo />
-        <div className="flex gap-5 pl-5">
+        <div className="hidden lg:flex gap-5 pl-5">
           <FaFacebookF className="text-[#8E1C38] text-[14px]" />
           <FaTwitter className="text-[#8E1C38] text-[14px]" />
           <TfiYoutube className="text-[#8E1C38] text-[14px]" />
         </div>
       </div>
 
-     
-      <div className="flex items-center">
+     <div>
+      <div className="flex items-center mt-10 lg:mt-0">
         <ul className="space-y-3">
           {links.map(({ name, path }) => (
             <li key={name} className=''>
@@ -44,9 +44,15 @@ const Footer: React.FC = () => {
           ))}
         </ul>
       </div>
+      <div className="flex lg:hidden mt-10 gap-5">
+          <FaFacebookF className="text-[#8E1C38] text-[14px]" />
+          <FaTwitter className="text-[#8E1C38] text-[14px]" />
+          <TfiYoutube className="text-[#8E1C38] text-[14px]" />
+        </div>
+      </div>
 
     
-      <div className="">
+      <div className="mt-10 lg:mt-0">
         <form className="space-y-3">
           <p className="font-semibold">Newsletter</p>
           <div className="flex flex-col gap-3">

@@ -13,8 +13,8 @@ const Contact: React.FC = () => {
   return (
     <div className="w-full relative overflow-hidden">
       <div className="bg-[#FFF8FA] relative pt-20 pb-40">
-        <div className="px-22">
-          <div className="space-y-5">
+        <div className="px-10 lg:px-22">
+          <div className="space-y-5 pb-10">
             <p className="text-[#8E1C38] underline text-[30px] font-semibold">
               Contact Us
             </p>
@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="absolute z-30 right-30 top-10">
+        <div className="absolute z-30 lg:right-30 lg:top-10">
           <FormModal />
         </div>
         <div className="absolute bottom-0 w-full z-0">
@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
 
-      <div className="py-35"></div>
+      <div className="py-55"></div>
     </div>
   );
 };

@@ -15,21 +15,24 @@ const About:React.FC = () => {
   return (
     <div className="">
       <div className="relative overflow-hidden">
-      <div className="relative ">
-        <div className="flex bg-[#FFF8FA] px-20 py-14 relative">
-          <div className="w-1/2">
-            <h1 className="text-3xl text-[#8E1C38] font-bold ml-10">
+      <div className="relative">
+        <div className="flex flex-col lg:flex-row gap-5 lg:gap-0 bg-[#FFF8FA] px-10 lg:px-20 py-14 relative">
+          <div className="w-full lg:w-1/2">
+            <h1 className="text-3xl text-center lg:text-start text-[#8E1C38] font-bold ml-10">
               About Us
             </h1>
           </div>
-          <div className="w-1/2">
+          <div className="w-full lg:w-1/2">
             <img
               src={people}
               alt="people"
               className="object-contain rounded-lg"
             />
+            <div className="mt-10 lg:hidden">
+             <NewsCardOne />
+             </div>
           </div>
-          <div className="absolute bottom-25 lg:bottom-6 xl:bottom-25 z-50 lg:left-20 xl:left-50">
+          <div className="hidden lg:block absolute bottom-25 lg:bottom-6 xl:bottom-25 z-50 lg:left-20 xl:left-50">
             <NewsCardOne />
           </div>
         </div>
@@ -44,9 +47,9 @@ const About:React.FC = () => {
       </div>
       </div>
 
-      <div className="flex justify-center py-20">
+      <div className="flex flex-col lg:flex-row lg:justify-center px-12 py-20">
         <div className="space-y-10">
-        <section className="flex gap-10">
+        <section className="flex flex-col lg:flex-row gap-10">
           <NewsCardTwo
             image={people4}
             title="Financial Investment and Capital Infusion"
@@ -58,7 +61,7 @@ const About:React.FC = () => {
             description="The power of Innovate Africa Fund is a network of seasoned advisors and industry veterans at your beck and call, They will walk you through strategic decisions, connect you with industry titans and potential customers, and help you craft a go-to-market strategy that'll have your target audience in awe."
           />
         </section>
-        <section className="flex gap-10">
+        <section className="flex flex-col lg:flex-row gap-10">
         <NewsCardTwo
             image={people2}
             title="Operatioinal Improvement"

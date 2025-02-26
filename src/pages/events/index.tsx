@@ -14,15 +14,15 @@ const Events: React.FC = () => {
           Events
         </h1>
 
-        <div className="w-full px-20 relative z-30">
+        <div className="w-full px-10 lg:px-20 relative z-30">
           <img
             src={speech}
             alt="speech"
             className="w-full h-[550px] object-cover rounded-t-lg"
           />
           <div className="absolute inset-0 bg-[#d31443] opacity-70 mix-blend-multiply rounded-t-lg mx-20"></div>
-          <div className="bg-white p-7 rounded-lg text-gray-500 absolute shadow-md -top-10 left-1/2 transform -translate-x-1/2">
-            <p>Premium events for founders</p>
+          <div className="bg-white p-4 lg:p-7 rounded-lg text-gray-500 absolute shadow-md -top-10 left-1/2 transform -translate-x-1/2">
+            <p className="text-sm lg:text-[14px]">Premium events for founders</p>
           </div>
           <div className="absolute z-30 -bottom-13 left-1/2 transform -translate-x-1/2">
             <EventForm />
@@ -37,7 +37,7 @@ const Events: React.FC = () => {
         </div>
       </div>
 
-      <div className="px-20 mt-30 mb-10 w-full">
+      <div className="px-10 lg:px-20 mt-30 mb-10 w-full">
         <h1 className="text-[#8E1C38] text-2xl font-bold mb-5">
           Upcoming Events
         </h1>

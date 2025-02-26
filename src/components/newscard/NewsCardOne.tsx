@@ -4,7 +4,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 const NewsCardOne: React.FC = () => {
   return (
-    <div className="space-y-5 pl-16 lg:pr-8 xl:pr-20 py-10 bg-white w-[35rem] rounded-lg">
+    <div className="space-y-5 pl-16 lg:pr-8 xl:pr-20 py-10 bg-white w-[350px] pr-5 lg:w-[35rem] rounded-lg">
       <div>
         <p className="font-semibold text-[#8E1C38]">
           Catalyzing Change, Driving Innovation:

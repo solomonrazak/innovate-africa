@@ -1,7 +1,7 @@
 const CardTwo = ({ image }: { image: string }) => {
   return (
-    <div className="w-[250px] h-[400px]">
-      <img src={image} className=" rounded-lg object-contain" />
+    <div className="w-full h-[400px]">
+      <img src={image} className="w-full rounded-lg object-contain " />
     </div>
   );
 };
