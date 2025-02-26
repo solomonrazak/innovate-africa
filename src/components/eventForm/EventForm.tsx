@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { X, ChevronDown } from "lucide-react";
 
-const EventForm = () => {
+const EventForm:React.FC = () => {
   const [search, setSearch] = useState("");
   const [place, setPlace] = useState("");
   const [selectedMonth, setSelectedMonth] = useState("");

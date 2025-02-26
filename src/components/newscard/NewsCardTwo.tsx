@@ -14,7 +14,7 @@ const NewsCardTwo: React.FC<NewsProps> = ({
   className,
 }) => {
   return (
-    <div className="w-[380px] space-y-3">
+    <div className={`w-[380px] space-y-3 ${className}`}>
       <img
         src={image}
         alt={title}
