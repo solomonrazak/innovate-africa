@@ -41,37 +41,37 @@ const Blog: React.FC = () => {
         <div className="flex justify-between px-18 items-center mt-13">
           <p className="text-gray-500">Explore specific categories</p>
           <div className="flex gap-8 items-center">
-          <ul className="flex gap-7 items-center text-[#8E1C38]">
-  {[
-    { name: "African News", path: "/blog/african-news" },  // Use absolute paths
-    { name: "Employment", path: "/blog/employment" },
-    { name: "Health", path: "/blog/health" },
-    { name: "Security", path: "/blog/security" },
-    { name: "Talent", path: "/blog/talent" },
-    { name: "Opportunities", path: "/blog/opportunities" }
-  ].map((link) => (
-    <li key={link.name}>
-      <NavLink
-        to={link.path}
-        className={({ isActive }) =>
-          `relative pb-1 transition-all duration-300 cursor-pointer ${
-            isActive ? "after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-1 after:w-full after:bg-[#8E1C38]" : "text-gray-400"
-          }`
-        }
-      >
-        {link.name}
-      </NavLink>
-    </li>
-  ))}
-</ul>
-
+            <ul className="flex gap-7 items-center text-[#8E1C38]">
+              {[
+                { name: "African News", path: "/blog/african-news" },
+                { name: "Employment", path: "/blog/employment" },
+                { name: "Health", path: "/blog/health" },
+                { name: "Security", path: "/blog/security" },
+                { name: "Talent", path: "/blog/talent" },
+                { name: "Opportunities", path: "/blog/opportunities" },
+              ].map((link) => (
+                <li key={link.name}>
+                  <NavLink
+                    to={link.path}
+                    className={({ isActive }) =>
+                      `relative pb-1 transition-all duration-300 cursor-pointer ${
+                        isActive
+                          ? "after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-1 after:w-full after:bg-[#8E1C38]"
+                          : "text-gray-400"
+                      }`
+                    }
+                  >
+                    {link.name}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
 
             <div className="bg-[#eadade] rounded-full h-4 w-4 flex items-center justify-center">
               <MdKeyboardArrowRight className="text-[#8E1C38]" />
             </div>
           </div>
         </div>
-
 
         <main className="my-12 px-5">
           <Outlet />

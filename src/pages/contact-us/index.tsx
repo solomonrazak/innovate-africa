@@ -9,7 +9,7 @@ import CurvedLine from "../../components/ui/CurvedLine";
 import FormModal from "../../components/contactForm/FormModal";
 import unn from "../../assets/images/unn.png";
 
-const Contact = () => {
+const Contact: React.FC = () => {
   return (
     <div className="w-full relative overflow-hidden">
       <div className="bg-[#FFF8FA] relative pt-20 pb-40">
@@ -34,16 +34,17 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="absolute z-30 right-30 top-10"><FormModal /></div>
+        <div className="absolute z-30 right-30 top-10">
+          <FormModal />
+        </div>
         <div className="absolute bottom-0 w-full z-0">
           <CurvedLine />
         </div>
         <div className="absolute -top-[10%] z-0">
-        <img src={unn} alt="union" className="w-[150px]"/>
+          <img src={unn} alt="union" className="w-[150px]" />
+        </div>
       </div>
-        
-      </div>
-      
+
       <div className="py-35"></div>
     </div>
   );

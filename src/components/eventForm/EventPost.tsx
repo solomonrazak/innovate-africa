@@ -23,9 +23,11 @@ const EventPost: React.FC<EventPostProps> = ({
           alt={title}
           className="w-full h-[200px] object-cover rounded-t-lg"
         />
-        
+
         <div className="absolute top-1 left-0 right-0 w-full px-2 flex justify-between items-center">
-          <div className="bg-white py-1 px-2 text-[#8E1C38] rounded-md">FREE</div>
+          <div className="bg-white py-1 px-2 text-[#8E1C38] rounded-md">
+            FREE
+          </div>
           <div className="flex items-center gap-3">
             <div className="bg-white w-5 h-5 rounded-full flex justify-center items-center">
               <img src={love} alt="love" className="w-3" />

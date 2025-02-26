@@ -4,7 +4,7 @@ import blog3 from "../../assets/images/blog3.jpeg"
 import blog4 from "../../assets/images/blog4.png";
 import blog5 from "../../assets/images/blog5.jpeg"
 
-const News = () => {
+const News:React.FC = () => {
   return (
     <div className="grid lg:grid-cols-3 xl:grid-cols-4 gap-4 px-13">
         <BlogCard title="Examining Labor Market Trends in Northern and Sub-Saharan Africa" name="Edward Evans" desc="Northern and Sub-Saharan Africa face the risk of slowing progress in job quality and opportunities. With rising levels of unemployment, the world of work in Africa is still challenged with..." image={blog3}/>

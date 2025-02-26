@@ -3,7 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { Outlet } from "react-router";
 
-const Layout = () => {
+const Layout:React.FC = () => {
   return (
     <div className="w-screen h-screen">
       <nav className="w-full z-50">

@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import Button from '../components/ui/Button';
 import { FaPaperPlane } from "react-icons/fa";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   const links = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },

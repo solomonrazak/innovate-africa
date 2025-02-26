@@ -6,7 +6,7 @@ import cover from "../../assets/images/cover.jpg";
 import EventPost from "../../components/eventForm/EventPost";
 import unn from "../../assets/images/unn.png";
 
-const Events = () => {
+const Events: React.FC = () => {
   return (
     <div className="w-full relative overflow-hidden">
       <div className="bg-[#FFF8FA] relative z-20">
@@ -33,12 +33,14 @@ const Events = () => {
           <CurvedLine />
         </div>
         <div className="absolute -top-[10%] z-0">
-        <img src={unn} alt="union" className="w-[150px]"/>
-      </div>
+          <img src={unn} alt="union" className="w-[150px]" />
+        </div>
       </div>
 
       <div className="px-20 mt-30 mb-10 w-full">
-        <h1 className="text-[#8E1C38] text-2xl font-bold mb-5">Upcoming Events</h1>
+        <h1 className="text-[#8E1C38] text-2xl font-bold mb-5">
+          Upcoming Events
+        </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           <EventPost
             title="The Future of digital Advertising in a world of Generative AI"
@@ -55,11 +57,6 @@ const Events = () => {
             desc="A master class where the future of advertising will be discussed"
             image={cover}
           />
-           <EventPost
-            title="The Future of digital Advertising in a world of Generative AI"
-            desc="A master class where the future of advertising will be discussed"
-            image={cover}
-          />
           <EventPost
             title="The Future of digital Advertising in a world of Generative AI"
             desc="A master class where the future of advertising will be discussed"
@@ -70,7 +67,12 @@ const Events = () => {
             desc="A master class where the future of advertising will be discussed"
             image={cover}
           />
-           <EventPost
+          <EventPost
+            title="The Future of digital Advertising in a world of Generative AI"
+            desc="A master class where the future of advertising will be discussed"
+            image={cover}
+          />
+          <EventPost
             title="The Future of digital Advertising in a world of Generative AI"
             desc="A master class where the future of advertising will be discussed"
             image={cover}

@@ -11,7 +11,7 @@ import unn from "../../assets/images/unn.png";
 import Button from "../../components/ui/Button";
 import { IoIosArrowForward } from "react-icons/io";
 
-const About = () => {
+const About:React.FC = () => {
   return (
     <div className="">
       <div className="relative overflow-hidden">

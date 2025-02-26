@@ -33,7 +33,7 @@ import unn from "../../assets/images/unn.png";
 
 const companies = [comp1, comp2, comp3, comp4, comp5];
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <div className="overflow-x-hidden">
        <div className="relative">

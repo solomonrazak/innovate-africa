@@ -17,34 +17,32 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />
+        element: <Home />,
       },
       {
         path: "about",
-        element: <About />
+        element: <About />,
       },
       {
         path: "events",
-        element: <Events />
+        element: <Events />,
       },
       {
         path: "contact-us",
-        element: <Contact />
+        element: <Contact />,
       },
       {
         path: "blog",
         element: <Blog />,
         children: [
-          { index: true, element: <Navigate to="african-news" replace /> }, 
+          { index: true, element: <Navigate to="african-news" replace /> },
           { path: "african-news", element: <News /> },
           { path: "employment", element: <Employment /> },
           { path: "health", element: <Health /> },
         ],
-      }
-      
+      },
     ],
   },
 ]);
-
 
 export default router;

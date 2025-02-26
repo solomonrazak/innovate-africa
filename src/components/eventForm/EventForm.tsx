@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import { X, ChevronDown } from 'lucide-react';
+import React, { useState } from "react";
+import { X, ChevronDown } from "lucide-react";
 
 const EventForm = () => {
-  const [search, setSearch] = useState('');
-  const [place, setPlace] = useState('');
+  const [search, setSearch] = useState("");
+  const [place, setPlace] = useState("");
   const [selectedMonth, setSelectedMonth] = useState("");
-
 
   const months = [
     { value: "01", label: "January" },
@@ -24,7 +23,6 @@ const EventForm = () => {
 
   return (
     <form className="bg-[#8E1C38] py-7 px-10 rounded-[15px] text-white grid grid-cols-1 lg:grid-cols-3 gap-7">
-     
       <div className="flex flex-col gap-3 relative">
         <label className="font-bold">Search Event</label>
         <div className="relative flex items-center">
@@ -38,7 +36,7 @@ const EventForm = () => {
           {search && (
             <button
               type="button"
-              onClick={() => setSearch('')}
+              onClick={() => setSearch("")}
               className="absolute right-2 bg-white text-[#8E1C38] p-[0.5px] rounded-full mb-1"
             >
               <X size={13} />
@@ -47,7 +45,6 @@ const EventForm = () => {
         </div>
       </div>
 
-    
       <div className="flex flex-col gap-3 w-full md:w-auto">
         <label className="font-bold">Place</label>
         <input
@@ -59,7 +56,6 @@ const EventForm = () => {
         />
       </div>
 
-    
       <div className="flex flex-col gap-3 w-full">
         <label className="font-bold">Month</label>
         <div className="relative">
@@ -68,7 +64,9 @@ const EventForm = () => {
             onChange={(e) => setSelectedMonth(e.target.value)}
             className="bg-transparent placeholder-white font-bold border-b border-white w-full focus:outline-none pb-1 appearance-none"
           >
-            <option value="" className="text-black">January</option>
+            <option value="" className="text-black">
+              January
+            </option>
             {months.map(({ value, label }) => (
               <option key={value} value={value} className="text-black">
                 {label}
