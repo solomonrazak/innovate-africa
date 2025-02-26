@@ -3,10 +3,11 @@ import router from './router';
 
 const App = () => {
   return (
-    <div>
+    <div className="">
+      
       <RouterProvider router={router} />
     </div>
   )
 }
 
-export default App
+export default App;

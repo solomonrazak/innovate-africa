@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <div className="pt-24 pb-36 px-10 lg:px-14 flex flex-col lg:flex-row justify-between w-full">
+    <div className="pt-24 pb-20 px-10 lg:px-14 flex flex-col lg:flex-row justify-between w-full">
     
       <div className="flex lg:block justify-between items-center space-y-5">
         <Logo />
